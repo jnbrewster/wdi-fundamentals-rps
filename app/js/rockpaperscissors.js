@@ -45,18 +45,18 @@ function getWinner(playerMove,computerMove) {
     return "tie";
   }
   else if (playerMove == "rock" && computerMove == "scissors" ) {
-    return "player wins";
+    winner = "player";
 
   }
   else if (playerMove == "paper" && computerMove == "rock" ) {
-    return "player wins";
+    winner = "player";
 
   }
   else if (playerMove == "scissors" && computerMove == "paper" ) {
-    return "player wins";
+    winner = "player";
   }
   else {
-    return "computer wins";
+    winner = "computer";
   }
 
 function playToFive() {
