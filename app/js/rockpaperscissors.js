@@ -4,7 +4,7 @@
 //'use strict';
 
 function getInput() {
-  console.log("Please choose either 'rock', 'paper', or 'scissors'.")
+  console.log("Please choose either 'rock', 'paper', or 'scissors'.");
   return prompt();
 }
 function randomPlay() {
@@ -70,27 +70,27 @@ function playToFive() {
   var computerWins = 0;
   // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
   while (playerWins < 5 || computerWins < 5) {
-    if (getWinner == "player") {
+    if (getWinner === "player") {
       console.log("Player wins this round!");
       console.log("You chose " + playerMove + ".");
       console.log("Computer chose " + computerMove + ".");
       playerWins += 1;
     }
-    else if (getWinner == "computer") {
+    else if (getWinner === "computer") {
       console.log("Computer wins this round!");
       console.log("You chose " + playerMove + ".");
       console.log("Computer chose " + computerMove + ".");
       computerWins += 1;
     }
-    else if (getWinner == "tie") {
+    else if (getWinner === "tie") {
       console.log("It was a tie!");
     }
   }
-  if (playerWins == 5) {
-    console.log("Player wins the game!")
+  if (playerWins === 5) {
+    console.log("Player wins the game!");
   }
-  else if (computerWins == 5) {
-    console.log("Computer wins the game!")
+  else if (computerWins === 5) {
+    console.log("Computer wins the game!");
   }
   return [playerWins, computerWins];
 }
