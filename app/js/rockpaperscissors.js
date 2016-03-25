@@ -23,8 +23,7 @@ function randomPlay() {
 
 
 function getPlayerMove(move) {
-  //SyntaxError: Unexpected token '{'. Expected ';' after var declaration.
-    move = move || getInput();
+  move = move || getInput();
   // Write an expression that operates on a variable called `move`
   // If a `move` has a value, your expression should evaluate to that value.
   // However, if `move` is not specified / is null, your expression should equal `getInput()`.
@@ -32,7 +31,6 @@ function getPlayerMove(move) {
 }
 
 function getComputerMove(move) {
-  //SyntaxError: Unexpected token '{'. Expected ';' after var declaration.
   move = move || randomPlay();
   // Write an expression that operates on a variable called `move`
   // If a `move` has a value, your expression should evaluate to that value.
@@ -44,15 +42,13 @@ function getWinner(playerMove,computerMove) {
   var winner;
 
   if (playerMove === computerMove) {
-    return "tie";
+    winner = "tie";
   }
   else if (playerMove == "rock" && computerMove == "scissors" ) {
     winner = "player";
-
   }
   else if (playerMove == "paper" && computerMove == "rock" ) {
     winner = "player";
-
   }
   else if (playerMove == "scissors" && computerMove == "paper" ) {
     winner = "player";
@@ -70,13 +66,19 @@ function playToFive() {
   // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
   while (playerWins < 5 || computerWins < 5) {
     if (getWinner == "player") {
-      //link to winner
       console.log("Player wins!");
+      console.log("You chose " + playerMove + ".");
+      console.log("Computer chose " + computerMove + ".");
       playerWins++;
     }
     else if (getWinner == "computer") {
       console.log("Computer wins!");
+      console.log("You chose " + playerMove + ".");
+      console.log("Computer chose " + computerMove + ".");
       computerWins++;
+    }
+    else if (getWinner == "tie") {
+      console.log("It was a tie!");
     }
   }
   return [playerWins, computerWins];
