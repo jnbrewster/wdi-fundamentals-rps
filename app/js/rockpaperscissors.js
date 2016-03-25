@@ -21,21 +21,35 @@ function randomPlay() {
 /*           Write Your Code Below            */
 ////////////////////////////////////////////////
 
-var getPlayerMove = function(move) {
-  if (move != null) {
 
+function getPlayerMove(move) {
+  var move {
+    if (move != null) {
+    move = move;
+    }
+  else {
+    move = getInput();
   }
   // Write an expression that operates on a variable called `move`
   // If a `move` has a value, your expression should evaluate to that value.
   // However, if `move` is not specified / is null, your expression should equal `getInput()`.
-  return 'rock';
+  return move;
+  }
 }
 
 function getComputerMove(move) {
-  // Write an expression that operates on a variable called `move`
-  // If a `move` has a value, your expression should evaluate to that value.
-  // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
-  return 'scissors';
+    var move {
+      if (move != null) {
+        move = move;
+      }
+      else {
+        move = randomPlay();
+      }
+    }
+    // Write an expression that operates on a variable called `move`
+    // If a `move` has a value, your expression should evaluate to that value.
+    // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
+    return /* Your Expression */;
 }
 
 function getWinner(playerMove,computerMove) {
@@ -70,14 +84,14 @@ function playToFive() {
     if (playerWins < 5) {
         playerWins = playerWins+1;
     }
-    return "player wins!"
+    return "player wins!";
   }
 
   while (winner = "computer") {
     if (computerWins < 5) {
         computerWins = computerWins+1;
     }
-    return "computer wins!"
+    return "computer wins!";
   }
 
   return [playerWins, computerWins];
