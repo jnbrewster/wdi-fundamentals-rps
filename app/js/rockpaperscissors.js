@@ -23,6 +23,7 @@ function randomPlay() {
 
 
 function getPlayerMove(move) {
+  //SyntaxError: Unexpected token '{'. Expected ';' after var declaration.
   var move {
     if (move != null) {
     move = move;
@@ -38,18 +39,19 @@ function getPlayerMove(move) {
 }
 
 function getComputerMove(move) {
-    var move {
-      if (move != null) {
-        move = move;
-      }
-      else {
-        move = randomPlay();
-      }
+  //SyntaxError: Unexpected token '{'. Expected ';' after var declaration.
+  var move {
+    if (move != null) {
+      move = move;
     }
-    // Write an expression that operates on a variable called `move`
-    // If a `move` has a value, your expression should evaluate to that value.
-    // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
-    return /* Your Expression */;
+    else {
+      move = randomPlay();
+    }
+  }
+  // Write an expression that operates on a variable called `move`
+  // If a `move` has a value, your expression should evaluate to that value.
+  // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
+  return move;
 }
 
 function getWinner(playerMove,computerMove) {
@@ -83,9 +85,11 @@ function playToFive() {
   while (playerWins < 5 || computerWins < 5) {
     if (getWinner == "player") {
       //link to winner
+      console.log("Player wins!");
       playerWins++;
     }
     else if (getWinner == "computer") {
+      console.log("Computer wins!");
       computerWins++;
     }
   }
