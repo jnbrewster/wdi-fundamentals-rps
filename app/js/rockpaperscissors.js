@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////
 /*   Provided Code - Please Don't Edit   */
 ////////////////////////////////////////////////
-//'use strict';
+'use strict';
 
 function getInput() {
   console.log("Please choose either 'rock', 'paper', or 'scissors'.");
@@ -70,19 +70,19 @@ function playToFive() {
   var computerWins = 0;
   // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
   while (playerWins < 5 || computerWins < 5) {
-    if (getWinner === "player") {
+    if (winner === "player") {
       console.log("Player wins this round!");
       console.log("You chose " + playerMove + ".");
       console.log("Computer chose " + computerMove + ".");
       playerWins += 1;
     }
-    else if (getWinner === "computer") {
+    else if (winner === "computer") {
       console.log("Computer wins this round!");
       console.log("You chose " + playerMove + ".");
       console.log("Computer chose " + computerMove + ".");
       computerWins += 1;
     }
-    else if (getWinner === "tie") {
+    else if (winner === "tie") {
       console.log("It was a tie!");
     }
   }
