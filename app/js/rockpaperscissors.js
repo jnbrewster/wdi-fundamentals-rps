@@ -24,30 +24,16 @@ function randomPlay() {
 
 function getPlayerMove(move) {
   //SyntaxError: Unexpected token '{'. Expected ';' after var declaration.
-  var move {
-    if (move != null) {
-    move = move;
-    }
-  else {
-    move = getInput();
-  }
+    move = move || getInput();
   // Write an expression that operates on a variable called `move`
   // If a `move` has a value, your expression should evaluate to that value.
   // However, if `move` is not specified / is null, your expression should equal `getInput()`.
   return move;
-  }
 }
 
 function getComputerMove(move) {
   //SyntaxError: Unexpected token '{'. Expected ';' after var declaration.
-  var move {
-    if (move != null) {
-      move = move;
-    }
-    else {
-      move = randomPlay();
-    }
-  }
+  move = move || randomPlay();
   // Write an expression that operates on a variable called `move`
   // If a `move` has a value, your expression should evaluate to that value.
   // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
