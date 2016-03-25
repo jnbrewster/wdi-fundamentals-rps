@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////
 /*   Provided Code - Please Don't Edit   */
 ////////////////////////////////////////////////
-'use strict';
+//'use strict';
 
 function getInput() {
   console.log("Please choose either 'rock', 'paper', or 'scissors'.")
@@ -48,13 +48,13 @@ function getWinner(playerMove,computerMove) {
   if (playerMove === computerMove) {
     winner = "tie";
   }
-  else if (playerMove == "rock" && computerMove == "scissors" ) {
+  else if (playerMove === "rock" && computerMove === "scissors" ) {
     winner = "player";
   }
-  else if (playerMove == "paper" && computerMove == "rock" ) {
+  else if (playerMove === "paper" && computerMove === "rock" ) {
     winner = "player";
   }
-  else if (playerMove == "scissors" && computerMove == "paper" ) {
+  else if (playerMove === "scissors" && computerMove === "paper" ) {
     winner = "player";
   }
   else
@@ -74,7 +74,6 @@ function playToFive() {
       console.log("Player wins this round!");
       console.log("You chose " + playerMove + ".");
       console.log("Computer chose " + computerMove + ".");
-      //does playerWins++ work here?
       playerWins += 1;
     }
     else if (getWinner == "computer") {
