@@ -27,8 +27,6 @@ function getPlayerMove(move) {
   // Write an expression that operates on a variable called `move`
   // If a `move` has a value, your expression should evaluate to that value.
   // However, if `move` is not specified / is null, your expression should equal `getInput()`.
-
-  //refactor move console.log here.
   return move;
 }
 
@@ -37,8 +35,6 @@ function getComputerMove(move) {
   // Write an expression that operates on a variable called `move`
   // If a `move` has a value, your expression should evaluate to that value.
   // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
-
-  //refactor move console.log here.
   return move;
 }
 
@@ -57,11 +53,16 @@ function getWinner(playerMove,computerMove) {
   else if (playerMove === "scissors" && computerMove === "paper" ) {
     winner = "player";
   }
-  else
- {
+  else {
     winner = "computer";
   }
+  //TODO: add catch for wrong input
   return winner;
+}
+
+function printChoices() {
+  console.log("You chose " + playerMove + ".");
+  console.log("Computer chose " + computerMove + ".");
 }
 
 function playToFive() {
@@ -76,14 +77,13 @@ function playToFive() {
   while (playerWins < 5 || computerWins < 5) {
     if (winner === "player") {
       console.log("Player wins this round!");
-      console.log("You chose " + playerMove + ".");
-      console.log("Computer chose " + computerMove + ".");
+      printChoices();
+
       playerWins += 1;
     }
     else if (winner === "computer") {
       console.log("Computer wins this round!");
-      console.log("You chose " + playerMove + ".");
-      console.log("Computer chose " + computerMove + ".");
+      printChoices();
       computerWins += 1;
     }
     else if (winner === "tie") {
@@ -92,13 +92,12 @@ function playToFive() {
   }
   if (playerWins === 5) {
     console.log("Player wins the game!");
-    console.log("You chose " + playerMove + ".");
-    console.log("Computer chose " + computerMove + ".");
+    printChoices();
   }
   else if (computerWins === 5) {
     console.log("Computer wins the game!");
-    console.log("You chose " + playerMove + ".");
-    console.log("Computer chose " + computerMove + ".");
+    printChoices();
   }
+  console.log("Player's score is: " + playerWins + ". " + "Computer's score is: " + computerWins + ".");
   return [playerWins, computerWins];
 }
