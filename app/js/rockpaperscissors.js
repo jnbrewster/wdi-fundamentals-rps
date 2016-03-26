@@ -53,10 +53,11 @@ function getWinner(playerMove,computerMove) {
   else if (playerMove === "scissors" && computerMove === "paper" ) {
     winner = "player";
   }
+  else if {
+    
   else {
-    winner = "computer";
+    console.log('Choose "rock", "paper" or "scissors".');
   }
-  //TODO: add catch for wrong input
   return winner;
 }
 
